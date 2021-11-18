@@ -59,6 +59,8 @@ def show_score():
     correct_wpm = 0
     mistakes = 0
     word_list = " ".join(CHOSEN_TEXT).split()
+    if "\n" in word_list:
+        word_list.remove("\n")
     index = 0
     for word in wpm:
         if word == word_list[index]:
